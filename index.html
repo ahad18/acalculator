@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{background-color: blueviolet;}
+        #iputnum ,#operation, #val2 {
+            border: 1px solid;
+    padding: 3px 19px;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+        }
+        #result{
+            color: aliceblue;
+            font-size: 30px;
+        }
+
+
+    </style>
+    
+    <input  type="number" placeholder="10" name="" id="iputnum" oninput="ahad()">
+    <select name="" id="operation" oninput="ahad()">
+        <option value="Add">Add</option>
+        <option value="sub">Sub</option>
+        <option value="Mul">Mul</option>
+        <option value="Div">Div</option>
+    </select>
+    <input type="number" value="10" name="" id="val2" oninput="ahad()" >
+    Calculator By Ahad❤️
+    <!-- <button oninput="ahad()">Calculate</button> -->
+    <p id="result"></p>
+    
+
+    <script >
+        
+function ahad(){
+  var pa = parseFloat(document.getElementById("iputnum").value);
+  var da = parseFloat(document.getElementById("val2").value);
+  var operation =document.getElementById("operation").value;
+  var op;
+  switch (operation) {
+    case 'Add':
+        op = pa + da ;
+        break;
+  
+    case 'sub':
+        op = pa - da ;
+        break;
+  
+    case 'Mul':
+        op = pa * da ;
+        break;
+  
+    case 'Div':
+        op = pa / da;
+        break;
+  
+    default:
+    op = pa + da ;
+        break;
+  }
+ document.getElementById('result').innerHTML = "Total="+ op +"$";
+
+};
+    </script>
+</body>
+</html>
